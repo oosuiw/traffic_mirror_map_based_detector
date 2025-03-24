@@ -1,15 +1,15 @@
-# The `traffic_light_map_based_detector` Package
+# The `traffic_mirror_map_based_detector` Package
 
 ## Overview
 
-`traffic_light_map_based_detector` calculates where the traffic lights will appear in the image based on the HD map.
+`traffic_mirror_map_based_detector` calculates where the traffic mirrors will appear in the image based on the HD map.
 
 Calibration and vibration errors can be entered as parameters, and the size of the detected RegionOfInterest will change according to the error.
 
-![traffic_light_map_based_detector_result](./docs/traffic_light_map_based_detector_result.svg)
+![traffic_mirror_map_based_detector_result](./docs/traffic_mirror_map_based_detector_result.svg)
 
-If the node receives route information, it only looks at traffic lights on that route.
-If the node receives no route information, it looks at a radius of 200 meters and the angle between the traffic light and the camera is less than 40 degrees.
+If the node receives route information, it only looks at traffic mirrors on that route.
+If the node receives no route information, it looks at a radius of 200 meters and the angle between the traffic mirror and the camera is less than 40 degrees.
 
 ## Input topics
 
@@ -23,8 +23,8 @@ If the node receives no route information, it looks at a radius of 200 meters an
 
 | Name             | Type                                        | Description                                                          |
 | ---------------- | ------------------------------------------- | -------------------------------------------------------------------- |
-| `~output/rois`   | tier4_perception_msgs::TrafficLightRoiArray | location of traffic lights in image corresponding to the camera info |
-| `~expect/rois`   | tier4_perception_msgs::TrafficLightRoiArray | location of traffic lights in image without any offset               |
+| `~output/rois`   | tier4_perception_msgs::TrafficmirrorRoiArray | location of traffic mirrors in image corresponding to the camera info |
+| `~expect/rois`   | tier4_perception_msgs::TrafficmirrorRoiArray | location of traffic mirrors in image without any offset               |
 | `~debug/markers` | visualization_msgs::MarkerArray             | visualization to debug                                               |
 
 ## Node parameters
